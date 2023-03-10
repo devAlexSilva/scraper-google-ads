@@ -1,0 +1,16 @@
+.menuItem {
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 12px;
+  color: #ffd020;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  background-color: #0C5EA3;
+}
+
+.menuItem:hover {
+  background-color: #ffd020;
+  color: #0C5EA3;
+}

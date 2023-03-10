@@ -1,0 +1,32 @@
+.header {
+    background-color: #0C5EA3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 103px;
+}
+
+.logos {
+    margin-left: 101px;
+}
+
+.logoTipo {
+    margin-right: 32px;
+}
+
+.nav {
+    margin-right: 121px;
+}
+
+/*NAVEGAÇÃO*/
+.menu {
+    display: flex;
+    justify-content: space-between;
+    gap: 35px;
+}
+
+.menuNav {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
