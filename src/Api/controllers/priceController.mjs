@@ -1,11 +1,13 @@
 import pup from 'puppeteer-core'
 
 const url = 'https://www.google.com.br/'
+const pathGoogle = 'C:/Program Files/Google/Chrome/Application/chrome.exe'
+const pathEdge = 'C:/ProgramData/Microsoft/Windows/Start Menu/Programs/Microsoft Edge.lnk'
 
 let itemCountInList = 0
 
 const scraper = async (productName) => {
-  const browser = await pup.launch({executablePath: "C:/Program Files/Google/Chrome/Application/chrome.exe"})
+  const browser = await pup.launch({executablePath: pathGoogle})
   const page = await browser.newPage()
   
   itemCountInList = 0 //zerando o contador a cada nova chamada

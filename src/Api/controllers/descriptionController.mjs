@@ -1,11 +1,12 @@
-import pup from 'puppeteer'
+import pup from 'puppeteer-core'
 
 const url = 'https://www.google.com.br/'
+const pathGoogle = 'C:/Program Files/Google/Chrome/Application/chrome.exe'
 
 let itemCountInList = 0
 
 const scraper = async (productName) => {
-  const browser = await pup.launch({ headless: false })
+  const browser = await pup.launch({ executablePath: pathGoogle })
   const page = await browser.newPage()
 
   itemCountInList = 0 //zerando o contador a cada nova chamada
@@ -55,7 +56,14 @@ const scraper = async (productName) => {
 
   console.log('desc: ', description)
   
+  await page.close()
   return description
+}
 
-  //await page.close()
+export const GetDescription = async (req, res) => {
+  const productName = req.query.name
+  const data = await scraper(productName)
+
+  console.log(data)
+  res.json(data)
 }
