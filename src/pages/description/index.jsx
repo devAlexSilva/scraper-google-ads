@@ -6,12 +6,6 @@ import styles from './main.module.css'
 
 export const Description = () => {
 
-  /** To Do
-   * add function to get description data in API
-   * pass function by search component
-   * show data and conditions
-   */
-
   const [loading, setIsLoading] = useState(false)
   const [data, setData] = useState([])
 
